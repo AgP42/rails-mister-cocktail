@@ -37,7 +37,7 @@ Cocktail.destroy_all
 
 # TODO: Write a seed to insert 100 posts in the database
 puts 'Creating 10 fake cocktails...'
-10.times do
+4.times do
   puts "#{Faker::Music::RockBand.name}"
   Cocktail.create(name: Faker::Music::RockBand.name)
 end
