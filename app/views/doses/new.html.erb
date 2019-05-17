@@ -1,7 +1,11 @@
-<h1>Add an ingredient to <%= @cocktail.name %></h1>
+<%= render partial: 'cocktails/small_banner', object: 'Add an ingredient to ' + @cocktail.name %>
+<!-- object: @cocktail permet d'envoyer une variable au partial. Il faut le nommer object ! -->
+
 
 <%= simple_form_for([@cocktail, @dose]) do |f| %>
   <%= f.input :ingredient_id, collection: Ingredient.all %>
   <%= f.input :description %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>
+
+<%= link_to "Back to the cocktail list", cocktails_path, :class => "btn btn-success" %>

@@ -1,0 +1,14 @@
+<div class="col-md-3">
+  <%= link_to cocktail_path(cocktail) do %>
+
+  <div class="card-category my-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=986&q=80<%#= cocktail.image_url %>')">
+    <%= cocktail.name %>
+  </div>
+
+  <% end %>
+  <%#= link_to "Show it!", cocktail_path(cocktail) %>
+
+  <%# cocktail.tags.each do |tag| %>
+    <!-- <span>#<%#= tag.name %></span> -->
+  <%# end %>
+</div>
