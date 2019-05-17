@@ -16,21 +16,21 @@ require "faker"
 
 
 ##########################
-# puts 'Cleaning database Ingredient...'
-# Ingredient.destroy_all
+puts 'Cleaning database Ingredient...'
+Ingredient.destroy_all
 
-# puts 'Creating ingredients...'
+puts 'Creating ingredients...'
 
-# url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
-# ingredient_list = open(url).read
-# ingredient_list_parsed = JSON.parse(ingredient_list)
+url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+ingredient_list = open(url).read
+ingredient_list_parsed = JSON.parse(ingredient_list)
 
-# ingredient_list_parsed["drinks"].each do |e|
-#   puts e["strIngredient1"]
-#   Ingredient.create(name: e["strIngredient1"])
-# end
+ingredient_list_parsed["drinks"].each do |e|
+  puts e["strIngredient1"]
+  Ingredient.create(name: e["strIngredient1"])
+end
 
-# puts 'Finished database Ingredient!'
+puts 'Finished database Ingredient!'
 
 puts 'Cleaning database Cocktail...'
 Cocktail.destroy_all
